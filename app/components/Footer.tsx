@@ -324,8 +324,8 @@ export default function Footer() {
               {/* Contact rows */}
               <div className="flex flex-col gap-2 mt-auto">
                 {[
-                  { icon: "✉", text: "contact@adityaxinnovation.com", color: "#38bdf8" },
-                  { icon: "📞", text: "+91 98765 43210", color: "#a78bfa" },
+                  { icon: "✉", text: "info@adityaxinnovations.com", color: "#38bdf8" },
+                  { icon: "📞", text: "+91 98344 14186", color: "#a78bfa" },
                   { icon: "📍", text: "Pune, Maharashtra, India", color: "#34d399" },
                 ].map((c) => (
                   <div key={c.text} className="flex items-center gap-2.5 text-xs text-white/25 hover:text-white/65 transition-colors duration-200 group cursor-default">

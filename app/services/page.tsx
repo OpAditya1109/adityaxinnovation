@@ -13,6 +13,7 @@ const SERVICES = [
     ),
     number: "01",
     title: "Web Development",
+    slug: "web-development",
     short: "Blazing-fast web experiences",
     desc: "Modern websites using React, Next.js, Shopify & MERN stack — optimized for speed, SEO, and conversion.",
     tags: ["React", "Next.js", "MERN", "Shopify"],
@@ -33,6 +34,8 @@ const SERVICES = [
     ),
     number: "02",
     title: "Mobile Apps",
+        slug: "mobile-app-development",
+
     short: "Native & cross-platform apps",
     desc: "Android & iOS applications built with Flutter and modern tech — smooth, scalable, and production-ready.",
     tags: ["Flutter", "Android", "iOS", "Dart"],
@@ -53,6 +56,8 @@ const SERVICES = [
     ),
     number: "03",
     title: "Shopify Solutions",
+        slug: "shopify-development",
+
     short: "E-commerce that converts",
     desc: "Custom Shopify stores, themes & automation — built to maximize revenue, retain customers, and scale fast.",
     tags: ["Shopify", "Liquid", "Automation", "CRO"],
@@ -72,6 +77,8 @@ const SERVICES = [
     number: "04",
     title: "Custom Software",
     short: "Tailored digital products",
+        slug: "custom-software-development",
+
     desc: "Bespoke software solutions for startups and enterprises — APIs, dashboards, SaaS platforms & more.",
     tags: ["Node.js", "Python", "APIs", "SaaS"],
     accent: "#fb923c",
@@ -91,6 +98,8 @@ const SERVICES = [
     number: "05",
     title: "UI/UX Design",
     short: "Interfaces people love",
+        slug: "ui-ux-design",
+
     desc: "Research-driven design systems, Figma prototypes & pixel-perfect implementations that delight users.",
     tags: ["Figma", "Design Systems", "Prototyping"],
     accent: "#f472b6",
@@ -110,6 +119,8 @@ const SERVICES = [
     number: "06",
     title: "AI Integration",
     short: "Smarter products with AI",
+        slug: "ai-integration",
+
     desc: "LLM integrations, AI-powered features, chatbots & automation to make your product genuinely intelligent.",
     tags: ["OpenAI", "LLMs", "Automation", "RAG"],
     accent: "#facc15",
@@ -239,21 +250,24 @@ export default function Services() {
             {SERVICES.map((s, i) => {
               const isHovered = hovered === s.id;
               return (
-                <div
-                  key={s.id}
-                  onMouseEnter={() => setHovered(s.id)}
-                  onMouseLeave={() => setHovered(null)}
-                  className="card-shimmer relative group rounded-2xl p-6 border cursor-pointer overflow-hidden transition-all duration-500"
-                  style={{
-                    background: isHovered
-                      ? `linear-gradient(135deg, ${s.glow}, rgba(255,255,255,0.02))`
-                      : "rgba(255,255,255,0.02)",
-                    borderColor: isHovered ? s.border : "rgba(255,255,255,0.06)",
-                    boxShadow: isHovered ? `0 0 40px ${s.glow}, 0 8px 30px rgba(0,0,0,0.4)` : "none",
-                    transform: isHovered ? "translateY(-4px)" : "translateY(0)",
-                    animationDelay: `${i * 0.07}s`,
-                  }}
-                >
+               <Link
+  key={s.id}
+  href={`/services/${s.slug}`}
+  onMouseEnter={() => setHovered(s.id)}
+  onMouseLeave={() => setHovered(null)}
+  className="card-shimmer relative group rounded-2xl p-6 border cursor-pointer overflow-hidden transition-all duration-500 block"
+  style={{
+    background: isHovered
+      ? `linear-gradient(135deg, ${s.glow}, rgba(255,255,255,0.02))`
+      : "rgba(255,255,255,0.02)",
+    borderColor: isHovered ? s.border : "rgba(255,255,255,0.06)",
+    boxShadow: isHovered
+      ? `0 0 40px ${s.glow}, 0 8px 30px rgba(0,0,0,0.4)`
+      : "none",
+    transform: isHovered ? "translateY(-4px)" : "translateY(0)",
+    animationDelay: `${i * 0.07}s`,
+  }}
+>
                   {/* Corner number */}
                   <div className="absolute top-5 right-5 number-label text-white/[0.07] text-xl font-black tracking-tighter transition-all duration-300"
                     style={{ color: isHovered ? s.accent : undefined, opacity: isHovered ? .25 : .07 }}>
@@ -344,7 +358,8 @@ export default function Services() {
                       width: isHovered ? "100%" : "0%",
                       background: `linear-gradient(90deg, transparent, ${s.accent}, transparent)`,
                     }} />
-                </div>
+              
+                </Link>
               );
             })}
           </div>
