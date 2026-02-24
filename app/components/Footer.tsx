@@ -215,12 +215,13 @@ export default function Footer() {
             backgroundSize: "60px 60px",
           }} />
 
-        {/* ── Dual marquee ── */}
+        {/* ── TOP Marquee — FIXED: was text-white/12, now text-white/60 ── */}
         <div className="border-b border-white/[0.04] py-3 overflow-hidden bg-white/[0.01]">
           <div className="marquee-l flex w-max">
             {MARQUEE.map((t, i) => (
-              <div key={i} className="mono-font flex items-center gap-3 px-7 text-[.58rem] uppercase tracking-[.2em] text-white/12 whitespace-nowrap">
-                <span className="w-1 h-1 rounded-full" style={{ background: ["#38bdf8","#a78bfa","#34d399","#f472b6"][i%4] + "60" }} />
+              <div key={i} className="mono-font flex items-center gap-3 px-7 text-[.58rem] uppercase tracking-[.2em] text-white/60 whitespace-nowrap">
+                {/* Dot: was near-invisible, now solid accent color */}
+                <span className="w-1 h-1 rounded-full" style={{ background: ["#38bdf8","#a78bfa","#34d399","#f472b6"][i%4] }} />
                 {t}
               </div>
             ))}
@@ -328,7 +329,7 @@ export default function Footer() {
                   { icon: "📞", text: "+91 98344 14186", color: "#a78bfa" },
                   { icon: "📍", text: "Pune, Maharashtra, India", color: "#34d399" },
                 ].map((c) => (
-                  <div key={c.text} className="flex items-center gap-2.5 text-xs text-white/25 hover:text-white/65 transition-colors duration-200 group cursor-default">
+                  <div key={c.text} className="flex items-center gap-2.5 text-xs text-white transition-colors duration-200 group cursor-default">
                     <span className="text-sm transition-colors duration-200" style={{ color: "rgba(255,255,255,0.2)" }}>{c.icon}</span>
                     <span>{c.text}</span>
                   </div>
@@ -380,7 +381,7 @@ export default function Footer() {
                     </div>
 
                     <div className="absolute bottom-0 left-0 h-0.5 rounded-b-2xl transition-all duration-500"
-                      style={{ width: isH ? "100%" : "0%", background: `linear-gradient(90deg,transparent,${s.accent},transparent)` }} />
+                      style={{ width: isH ? "100%" : "0%" , background: `linear-gradient(90deg,transparent,${s.accent},transparent)` }} />
                   </a>
                 );
               })}
@@ -502,12 +503,13 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ── Bottom marquee ── */}
+        {/* ── BOTTOM Marquee — FIXED: was text-white/10, now text-white/50 ── */}
         <div className="border-t border-white/[0.04] overflow-hidden py-3 bg-white/[0.01]">
           <div className="marquee-r flex w-max">
             {MARQUEE.map((t, i) => (
-              <div key={i} className="mono-font flex items-center gap-3 px-7 text-[.55rem] uppercase tracking-[.2em] text-white/10 whitespace-nowrap">
-                <span className="w-1 h-1 rounded-full bg-white/15" />
+              <div key={i} className="mono-font flex items-center gap-3 px-7 text-[.55rem] uppercase tracking-[.2em] text-white/50 whitespace-nowrap">
+                {/* Dot: was bg-white/15, now solid white/40 for visibility */}
+                <span className="w-1 h-1 rounded-full bg-white/40" />
                 {t}
               </div>
             ))}

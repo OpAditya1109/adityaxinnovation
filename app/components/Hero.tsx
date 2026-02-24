@@ -342,12 +342,12 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* ── Bottom marquee ── */}
+        {/* ── Bottom marquee — FIXED: text-white/15 → text-white/55, dot bg-sky-400/40 → bg-sky-400 ── */}
         <div className="absolute bottom-0 left-0 right-0 border-t border-white/[0.04] bg-white/[0.01] overflow-hidden py-3.5">
           <div className="marquee-track flex w-max">
             {MARQUEE_ITEMS.map((item, i) => (
-              <div key={i} className="mono-font flex items-center gap-3 px-8 text-[0.6rem] uppercase tracking-[0.18em] text-white/15 whitespace-nowrap">
-                <span className="w-1 h-1 rounded-full bg-sky-400/40 flex-shrink-0" />
+              <div key={i} className="mono-font flex items-center gap-3 px-8 text-[0.6rem] uppercase tracking-[0.18em] text-white/55 whitespace-nowrap">
+                <span className="w-1 h-1 rounded-full bg-sky-400 flex-shrink-0" />
                 {item}
               </div>
             ))}
