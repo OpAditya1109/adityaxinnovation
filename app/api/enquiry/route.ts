@@ -11,7 +11,7 @@ export async function POST(req: Request) {
 
     console.log("Mongo connected");
 
-    const db = client.db("adityaxinnovations");
+    const db = client.db("adityaXinnovations");
 
     const result = await db.collection("enquiries").insertOne({
       name: body.name,

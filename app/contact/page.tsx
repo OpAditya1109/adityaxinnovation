@@ -145,18 +145,46 @@ const handleSubmit = async (e: React.FormEvent) => {
 
     const data = await res.json();
 
-    if (data.success) {
-      setSubmitted(true);
+if (data.success) {
 
-      setForm({
-        name: "",
-        email: "",
-        phone: "",
-        services: [],
-        budget: "",
-        message: "",
-      });
+  // Wait briefly to ensure Meta Pixel is loaded
+  setTimeout(() => {
+
+    if (typeof window !== "undefined") {
+
+      const fbq = (window as any).fbq;
+
+      if (typeof fbq === "function") {
+
+        fbq("track", "Lead", {
+          content_name: "Contact Form",
+          content_category: "Enquiry",
+          value: 1,
+          currency: "INR",
+        });
+
+        console.log("✅ Meta Lead event fired");
+
+      } else {
+
+        console.error("❌ Meta Pixel not loaded");
+
+      }
     }
+
+  }, 300);
+
+  setSubmitted(true);
+
+  setForm({
+    name: "",
+    email: "",
+    phone: "",
+    services: [],
+    budget: "",
+    message: "",
+  });
+}
 
   } catch (error) {
     console.error(error);
