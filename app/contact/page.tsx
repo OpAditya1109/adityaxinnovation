@@ -127,12 +127,44 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.name || !form.email || !form.message) return;
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (!form.name || !form.email || !form.message) return;
+
+  try {
     setLoading(true);
-    setTimeout(() => { setLoading(false); setSubmitted(true); }, 1800);
-  };
+
+    const res = await fetch("/api/enquiry", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    const data = await res.json();
+
+    if (data.success) {
+      setSubmitted(true);
+
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        services: [],
+        budget: "",
+        message: "",
+      });
+    }
+
+  } catch (error) {
+    console.error(error);
+    alert("Error sending message");
+  } finally {
+    setLoading(false);
+  }
+};
 
   const inputBase =
     "w-full px-4 py-3.5 rounded-xl text-sm text-white/75 placeholder:text-white/18 bg-white/[0.04] border transition-all duration-200 outline-none";
