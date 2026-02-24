@@ -23,10 +23,10 @@ const CONTACT_INFO = [
       </svg>
     ),
     label: "Email Us",
-    value: "contact@adityaxinnovation.com",
+    value: "info@adityaxinnovation.com",
     sub: "We reply within 24 hours",
     accent: "#38bdf8",
-    href: "mailto:contact@adityaxinnovation.com",
+    href: "mailto:info@adityaxinnovation.com",
   },
   {
     icon: (
@@ -35,10 +35,10 @@ const CONTACT_INFO = [
       </svg>
     ),
     label: "Call Us",
-    value: "+91 98765 43210",
+    value: "+91 98344 14186",
     sub: "Mon–Sat, 10am–7pm IST",
     accent: "#a78bfa",
-    href: "tel:+919876543210",
+    href: "tel:+919834414186",
   },
   {
     icon: (
