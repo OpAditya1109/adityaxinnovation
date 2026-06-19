@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* Your custom styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #020617 0%, #030712 100%);
+  color: #0f172a;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
