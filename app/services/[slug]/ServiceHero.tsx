@@ -15,6 +15,7 @@ const ICONS: Record<string, React.ReactNode> = {
   code:   <svg viewBox="0 0 24 24" fill="none" className="w-10 h-10"><path d="M8 9l-4 3 4 3M16 9l4 3-4 3M13 6l-2 12" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"/></svg>,
   design: <svg viewBox="0 0 24 24" fill="none" className="w-10 h-10"><circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>,
   ai:     <svg viewBox="0 0 24 24" fill="none" className="w-10 h-10"><path d="M12 2a4 4 0 014 4v1h1a3 3 0 010 6h-1v1a4 4 0 01-8 0v-1H7a3 3 0 010-6h1V6a4 4 0 014-4z" stroke="currentColor" strokeWidth="1.3"/><path d="M9 12h6M12 9v6" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>,
+  arvr:   <svg viewBox="0 0 24 24" fill="none" className="w-10 h-10"><rect x="2" y="7" width="20" height="11" rx="4" stroke="currentColor" strokeWidth="1.3"/><circle cx="8" cy="12.5" r="1.5" fill="currentColor"/><circle cx="16" cy="12.5" r="1.5" fill="currentColor"/><path d="M10.5 12.5h3" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round"/></svg>,
 };
 
 export default function ServiceHero({ s, slug }: { s: S; slug: string }) {

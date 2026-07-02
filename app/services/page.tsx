@@ -129,6 +129,28 @@ const SERVICES = [
     gradient: "from-yellow-500/10 to-yellow-500/0",
     stat: "30+ AI Apps",
   },
+  {
+    id: "arvr",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" className="w-7 h-7">
+        <rect x="2" y="7" width="20" height="11" rx="4" stroke="currentColor" strokeWidth="1.5"/>
+        <circle cx="8" cy="12.5" r="1.6" fill="currentColor"/>
+        <circle cx="16" cy="12.5" r="1.6" fill="currentColor"/>
+        <path d="M10.5 12.5h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+      </svg>
+    ),
+    number: "07",
+    title: "AR/VR Development",
+    slug: "ar-vr-development",
+    short: "Immersive experiences that convert",
+    desc: "Augmented and virtual reality apps, WebAR try-ons, and 3D product experiences — built for Meta Quest, mobile AR, and the web.",
+    tags: ["Unity", "ARKit", "ARCore", "WebXR"],
+    accent: "#22d3ee",
+    glow: "rgba(34,211,238,0.15)",
+    border: "rgba(34,211,238,0.2)",
+    gradient: "from-cyan-500/10 to-cyan-500/0",
+    stat: "15+ Experiences",
+  },
 ];
 
 export default function Services() {

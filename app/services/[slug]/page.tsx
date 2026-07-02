@@ -163,6 +163,32 @@ export const serviceData = {
     cta: "Add AI to My Product",
     quote: { text: "Our AI chatbot handles 70% of support tickets autonomously. ROI was positive in week 3.", author: "Dev P.", role: "VP Operations" },
   },
+  "ar-vr-development": {
+    title: "AR/VR", fullTitle: "AR/VR Development",
+    tagline: "Immersive worlds. Real-world results.",
+    description: "Augmented and virtual reality experiences that turn products, spaces, and training into something people can step inside — built for Meta Quest, mobile AR, and the open web.",
+    accent: "#22d3ee", glow: "rgba(34,211,238,0.18)", glowDim: "rgba(34,211,238,0.07)", accent2: "#38bdf8", accentRgb: "34,211,238",
+    icon: "arvr", number: "07",
+    stats: [{ num: "15+", label: "Experiences Shipped", icon: "🕶️" }, { num: "3×", label: "Engagement Lift", icon: "📈" }, { num: "90fps", label: "Smooth Tracking", icon: "🎯" }, { num: "100%", label: "Cross-platform", icon: "🌐" }],
+    features: [
+      { title: "WebAR & WebXR", desc: "No-app-download AR try-ons and 3D viewers that run straight in the browser.", icon: "🌐", tag: "Web" },
+      { title: "Meta Quest & Headsets", desc: "Native VR builds for Quest, PICO, and Vision Pro — from concept to store listing.", icon: "🕶️", tag: "VR" },
+      { title: "Mobile AR", desc: "ARKit and ARCore experiences with rock-solid plane detection and tracking.", icon: "📱", tag: "Mobile" },
+      { title: "3D Product Viewers", desc: "Interactive, shoppable 3D models that boost conversion on product pages.", icon: "🛍️", tag: "Commerce" },
+      { title: "Training Simulations", desc: "Safe, repeatable VR training environments for onboarding and upskilling.", icon: "🎓", tag: "Enterprise" },
+      { title: "Unity & Unreal", desc: "Production-grade 3D pipelines optimized for performance on real devices.", icon: "🎮", tag: "Engine" },
+    ],
+    process: [
+      { step: "01", title: "Concept", desc: "Define the experience goal, platform targets, and success metrics." },
+      { step: "02", title: "3D Prototyping", desc: "Low-fi 3D blockouts and interaction tests validated early." },
+      { step: "03", title: "Build", desc: "Full Unity/Unreal or WebXR development with real asset pipelines." },
+      { step: "04", title: "Device Testing", desc: "Performance, comfort, and tracking QA across target hardware." },
+      { step: "05", title: "Launch", desc: "Store submission or web deploy, plus post-launch tuning." },
+    ],
+    tech: ["Unity", "Unreal Engine", "ARKit", "ARCore", "WebXR", "Three.js", "Blender", "Meta SDK"],
+    cta: "Build My AR/VR Experience",
+    quote: { text: "Our WebAR try-on cut returns by 28% in the first month. Customers finally know what they're getting.", author: "Karan D.", role: "Founder, D2C Eyewear" },
+  },
 };
 
 export const OTHER_SERVICES = [
@@ -172,6 +198,7 @@ export const OTHER_SERVICES = [
   { slug: "custom-software-development", label: "Software", accent: "#fb923c", number: "04" },
   { slug: "ui-ux-design", label: "UI/UX", accent: "#f472b6", number: "05" },
   { slug: "ai-integration", label: "AI", accent: "#facc15", number: "06" },
+  { slug: "ar-vr-development", label: "AR/VR", accent: "#22d3ee", number: "07" },
 ];
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
