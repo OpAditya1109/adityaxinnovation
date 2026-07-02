@@ -41,7 +41,7 @@ const SOCIALS = [
 
 const STATS = [
   { num: 20, suffix: "+", label: "Projects", accent: "#38bdf8" },
-  { num: 50, suffix: "+", label: "Clients", accent: "#a78bfa" },
+  { num: 5, suffix: "+", label: "Clients", accent: "#a78bfa" },
   { num: 5, suffix: "★", label: "Rating", accent: "#facc15" },
   { num: 98, suffix: "%", label: "Satisfied", accent: "#34d399" },
 ];
