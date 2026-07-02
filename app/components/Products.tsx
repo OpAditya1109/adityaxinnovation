@@ -14,6 +14,7 @@ const PRODUCTS = [
     accent: "#fb923c",
     glow: "rgba(251,146,60,0.28)",
     glowStrong: "rgba(251,146,60,0.55)",
+    link: "https://sevenbites.adityaxinnovations.com",
   },
   {
     id: "subflow",
@@ -26,6 +27,7 @@ const PRODUCTS = [
     accent: "#34d399",
     glow: "rgba(52,211,153,0.28)",
     glowStrong: "rgba(52,211,153,0.55)",
+    link: null,
   },
   {
     id: "gst-itc",
@@ -38,6 +40,7 @@ const PRODUCTS = [
     accent: "#38bdf8",
     glow: "rgba(56,189,248,0.28)",
     glowStrong: "rgba(56,189,248,0.55)",
+    link: "https://gst-itc.adityaxinnovations.com",
   },
   {
     id: "7days",
@@ -50,6 +53,7 @@ const PRODUCTS = [
     accent: "#a78bfa",
     glow: "rgba(167,139,250,0.28)",
     glowStrong: "rgba(167,139,250,0.55)",
+    link: "https://7days.adityaxinnovations.com",
   },
   {
     id: "astrobhavana",
@@ -62,6 +66,7 @@ const PRODUCTS = [
     accent: "#f472b6",
     glow: "rgba(244,114,182,0.28)",
     glowStrong: "rgba(244,114,182,0.55)",
+    link: "https://astrobhavana.com",
   },
   {
     id: "matrimony",
@@ -74,6 +79,7 @@ const PRODUCTS = [
     accent: "#facc15",
     glow: "rgba(250,204,21,0.22)",
     glowStrong: "rgba(250,204,21,0.45)",
+    link: "https://bhavanamatrimony.com",
   },
 ];
 
@@ -206,6 +212,53 @@ export default function Products() {
         .px-cta-btn:hover svg {
           transform: translateX(3px);
         }
+
+        .px-visit-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 12px 22px;
+          border-radius: 100px;
+          font-family: 'Outfit', sans-serif;
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: .02em;
+          border: 1.5px solid;
+          background: transparent;
+          cursor: pointer;
+          text-decoration: none;
+          transition: all .25s ease;
+          white-space: nowrap;
+        }
+        .px-visit-btn:hover {
+          transform: translateY(-2px);
+        }
+        .px-visit-btn svg {
+          transition: transform .2s ease;
+        }
+        .px-visit-btn:hover svg {
+          transform: translate(2px,-2px);
+        }
+
+        .px-item-link {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          opacity: 0;
+          transform: scale(.8);
+          transition: all .25s ease;
+        }
+        .px-item:hover .px-item-link,
+        .px-item.px-active .px-item-link {
+          opacity: 1;
+          transform: scale(1);
+        }
+        .px-item-link:hover {
+          transform: scale(1.15) !important;
+        }
       `}</style>
 
       <section
@@ -334,7 +387,7 @@ export default function Products() {
                 </p>
 
                 {/* Tags */}
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: p.link ? 32 : 0 }}>
                   {p.tags.map((tag) => (
                     <span
                       key={tag}
@@ -349,6 +402,22 @@ export default function Products() {
                     </span>
                   ))}
                 </div>
+
+                {/* Live link */}
+                {p.link && (
+                    <a
+                      href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-visit-btn"
+                    style={{ color: p.accent, borderColor: `${p.accent}55` }}
+                  >
+                    Visit Live Site
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                      <path d="M4 9L9 4M9 4H5M9 4V8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
+                )}
               </div>
 
               {/* Stat footer */}
@@ -385,6 +454,22 @@ export default function Products() {
                     <div className="px-item-title">{pr.title}</div>
                     <div className="px-item-short">{pr.short}</div>
                   </div>
+
+                  {pr.link && (
+                      <a
+                        href={pr.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="px-item-link"
+                      style={{ background: `${pr.accent}18`, color: pr.accent }}
+                      title={`Visit ${pr.title}`}
+                    >
+                      <svg width="11" height="11" viewBox="0 0 13 13" fill="none">
+                        <path d="M4 9L9 4M9 4H5M9 4V8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </a>
+                  )}
 
                   <div className="px-item-arrow">→</div>
                 </div>
