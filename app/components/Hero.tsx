@@ -8,6 +8,7 @@ const SERVICES = [
   { label: "Shopify Solutions", color: "#FBBF24" },
   { label: "Custom Software", color: "#A78BFA" },
   { label: "AI Integration", color: "#F472B6" },
+  { label: "AR/VR Development", color: "#22D3EE" },
   { label: "Cloud Architecture", color: "#38BDF8" },
 ];
 
@@ -20,9 +21,9 @@ const STATS = [
 
 const TICKER = [
   "Web Development", "Mobile Apps", "Shopify", "Custom Software",
-  "UI/UX Design", "Cloud Solutions", "AI Integration", "API Development",
+  "UI/UX Design", "Cloud Solutions", "AI Integration", "AR/VR Development", "API Development",
   "Web Development", "Mobile Apps", "Shopify", "Custom Software",
-  "UI/UX Design", "Cloud Solutions", "AI Integration", "API Development",
+  "UI/UX Design", "Cloud Solutions", "AI Integration", "AR/VR Development", "API Development",
 ];
 
 export default function Hero() {
@@ -103,11 +104,11 @@ export default function Hero() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;500;700&display=swap');
 
         .hero-root * { box-sizing: border-box; }
-        .hero-root { font-family: 'Inter', system-ui, sans-serif; }
-        .mono { font-family: 'JetBrains Mono', monospace; }
+        .hero-root { font-family: 'Outfit', system-ui, sans-serif; }
+        .mono { font-family: 'Space Mono', monospace; }
 
         @keyframes fadeUp   { from { opacity:0; transform:translateY(24px) } to { opacity:1; transform:translateY(0) } }
         @keyframes fadeIn   { from { opacity:0 } to { opacity:1 } }
@@ -353,8 +354,6 @@ export default function Hero() {
                 </svg>
               </Link>
             </div>
-
-     
 
             {/* Stats row */}
             <div className="fu6" style={{

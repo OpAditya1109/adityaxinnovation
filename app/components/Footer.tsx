@@ -10,6 +10,7 @@ const SERVICES = [
   { label: "Custom Software", accent: "#fb923c" },
   { label: "UI/UX Design", accent: "#f472b6" },
   { label: "AI Integration", accent: "#facc15" },
+  { label: "AR/VR Development", accent: "#22d3ee" },
 ];
 
 const LINKS = [

@@ -210,10 +210,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800;900&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
-        .pg{font-family:'Inter',sans-serif;}
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
+        .pg{font-family:'Outfit',sans-serif;}
         .mn{font-family:'Space Mono',monospace;}
-        .dn{font-family:'Syne',sans-serif;}
+        .dn{font-family:'Outfit',sans-serif;}
 
         @keyframes fade-up   {from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:translateY(0)}}
         @keyframes breathe   {0%,100%{opacity:.28;transform:scale(1)}50%{opacity:.6;transform:scale(1.12)}}
