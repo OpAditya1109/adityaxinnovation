@@ -13,7 +13,7 @@ export const serviceData = {
     description: "We craft world-class web experiences using Next.js, React, and modern stacks — optimized for speed, search engines, and real business results.",
     accent: "#38bdf8", glow: "rgba(56,189,248,0.18)", glowDim: "rgba(56,189,248,0.07)", accent2: "#818cf8", accentRgb: "56,189,248",
     icon: "web", number: "01",
-    stats: [{ num: "150+", label: "Sites Launched", icon: "🌐" }, { num: "99%", label: "Uptime SLA", icon: "⚡" }, { num: "< 1s", label: "Load Time", icon: "🚀" }, { num: "100", label: "Lighthouse Score", icon: "💯" }],
+    stats: [{ num: "20", label: "Sites Launched", icon: "🌐" }, { num: "99%", label: "Uptime SLA", icon: "⚡" }, { num: "< 1s", label: "Load Time", icon: "🚀" }, { num: "100", label: "Lighthouse Score", icon: "💯" }],
     features: [
       { title: "Next.js & React", desc: "SSR, static generation, ISR, and edge functions — the full modern stack.", icon: "⚡", tag: "Core" },
       { title: "SEO Domination", desc: "Structured data, meta tags, sitemaps, and Core Web Vitals tuning baked in.", icon: "🔍", tag: "Growth" },

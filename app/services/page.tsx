@@ -21,7 +21,7 @@ const SERVICES = [
     glow: "rgba(56,189,248,0.15)",
     border: "rgba(56,189,248,0.2)",
     gradient: "from-sky-500/10 to-sky-500/0",
-    stat: "150+ Sites",
+    stat: "20 Sites",
   },
   {
     id: "mobile",
