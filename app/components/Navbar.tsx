@@ -86,6 +86,11 @@ export default function Navbar() {
           height: 100%;
           object-fit: contain;
         }
+        .logo-text-stack {
+          display: flex;
+          flex-direction: column;
+          line-height: 1;
+        }
         .logo-name {
           font-family: 'Outfit', sans-serif;
           font-weight: 700;
@@ -100,6 +105,16 @@ export default function Navbar() {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
+        }
+        .logo-tagline {
+          font-family: 'Outfit', sans-serif;
+          font-weight: 500;
+          font-size: 0.6rem;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: rgba(10,10,10,0.4);
+          margin-top: 3px;
+          white-space: nowrap;
         }
 
         /* Nav link text */
@@ -208,15 +223,18 @@ export default function Navbar() {
                 <Image
                   src="/logo.png"
                   alt="AdityaX Innovation"
-                  width={40}
-                  height={40}
+                  width={100}
+                  height={80}
                   priority
                   className="logo-img"
                 />
               </div>
-              <span className="logo-name">
-                Aditya<em>X</em>
-              </span>
+              <div className="logo-text-stack">
+                <span className="logo-name">
+                  Aditya<em>X</em>
+                </span>
+                <span className="logo-tagline">Innovations</span>
+              </div>
             </Link>
 
             {/* ── Desktop Nav ── */}

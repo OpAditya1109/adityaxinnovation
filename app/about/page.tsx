@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const STATS = [
-  { num: "20+", label: "Projects Delivered", accent: "#38bdf8" },
+  { num: "6+", label: "Projects Delivered", accent: "#38bdf8" },
   { num: "5+", label: "Happy Clients", accent: "#a78bfa" },
   { num: "2026", label: "Founded", accent: "#34d399" },
   { num: "24/7", label: "Support", accent: "#f472b6" },

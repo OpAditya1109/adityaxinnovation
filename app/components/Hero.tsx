@@ -12,7 +12,7 @@ const SERVICES = [
 ];
 
 const STATS = [
-  { num: "20+", label: "Projects Delivered" },
+  { num: "6+", label: "Projects Delivered" },
   { num: "98%", label: "Client Satisfaction" },
   { num: "5★", label: "Average Rating" },
   { num: "24/7", label: "Support" },
