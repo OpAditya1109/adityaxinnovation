@@ -41,10 +41,10 @@ const SOCIALS = [
 ];
 
 const STATS = [
-  { num: 6, suffix: "+", label: "Projects", accent: "#38bdf8" },
-  { num: 5, suffix: "+", label: "Clients", accent: "#a78bfa" },
+  { num: 6, suffix: "+", label: "Products", accent: "#38bdf8" },
+  { num: 100, suffix: "%", label: "In-House", accent: "#a78bfa" },
   { num: 5, suffix: "★", label: "Rating", accent: "#facc15" },
-  { num: 98, suffix: "%", label: "Satisfied", accent: "#34d399" },
+  { num: 24, suffix: "/7", label: "Support", accent: "#34d399" },
 ];
 
 const MARQUEE = [
