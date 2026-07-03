@@ -169,7 +169,7 @@ export const serviceData = {
     description: "Augmented and virtual reality experiences that turn products, spaces, and training into something people can step inside — built for Meta Quest, mobile AR, and the open web.",
     accent: "#22d3ee", glow: "rgba(34,211,238,0.18)", glowDim: "rgba(34,211,238,0.07)", accent2: "#38bdf8", accentRgb: "34,211,238",
     icon: "arvr", number: "07",
-    stats: [{ num: "15+", label: "Experiences Shipped", icon: "🕶️" }, { num: "3×", label: "Engagement Lift", icon: "📈" }, { num: "90fps", label: "Smooth Tracking", icon: "🎯" }, { num: "100%", label: "Cross-platform", icon: "🌐" }],
+    stats: [{ num: "3+", label: "Experiences Shipped", icon: "🕶️" }, { num: "3×", label: "Engagement Lift", icon: "📈" }, { num: "90fps", label: "Smooth Tracking", icon: "🎯" }, { num: "100%", label: "Cross-platform", icon: "🌐" }],
     features: [
       { title: "WebAR & WebXR", desc: "No-app-download AR try-ons and 3D viewers that run straight in the browser.", icon: "🌐", tag: "Web" },
       { title: "Meta Quest & Headsets", desc: "Native VR builds for Quest, PICO, and Vision Pro — from concept to store listing.", icon: "🕶️", tag: "VR" },
